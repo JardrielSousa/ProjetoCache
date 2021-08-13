@@ -18,13 +18,7 @@ public class ProductService {
 	
 	private final ProductRepository  productRepository; 
 	
-	@Cacheable("product-cache")
 	public  List<Product> listAll() {
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 		log.info("c=ProductService,s=listAll");
 		return productRepository.listAll();
 	}

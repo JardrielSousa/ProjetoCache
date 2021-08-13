@@ -3,6 +3,7 @@ package com.dio.cache.repository;
 import java.math.BigDecimal;
 import java.util.List;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 import com.dio.cache.entities.Product;
@@ -13,7 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Slf4j
 public class ProductRepository {
-
 	public List<Product> listAll(){
 		final Product product = Product.builder()
 				.sku("prod123")
